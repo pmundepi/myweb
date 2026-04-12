@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# 1. External Redirect: If someone types 'about.html', redirect them to 'about'
+# This ensures your URL looks clean in the browser address bar
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [L,R=301]
+
+# 2. Internal Mapping: If someone visits 'about', show 'about.html' behind the scenes
+# Check if the request is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# Check if the filename plus .html exists as a real file
+RewriteCond %{REQUEST_FILENAME}\.html -f
+# Internally point the request to the .html version
+RewriteRule ^(.*)$ $1.html [L]
+
+# Upgrade insecure requests to HTTPS automatically
+Header always set Content-Security-Policy "upgrade-insecure-requests"
