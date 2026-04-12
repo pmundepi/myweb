@@ -6947,6 +6947,7 @@ body.locked {
   background: #ffffff;
   z-index: 2;
   transition: all 400ms ease;
+  text-align: left;
 }
 
 /* Accent bar on top of content area on hover */
@@ -17947,7 +17948,8 @@ html body ul.services-details__services li a i.icon-arrow-subtle {
 .expertise-grid-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  row-gap: 30px;
+  column-gap: 14px;
   align-items: stretch;
 }
 
@@ -17972,11 +17974,28 @@ html body ul.services-details__services li a i.icon-arrow-subtle {
   background: #fff;
   border: 1px solid #f0f0f0;
   border-radius: 10px;
-  transition: box-shadow 0.2s ease;
+  transition: all 400ms ease;
+  text-align: left;
 }
 
 .expertise-card:hover {
-  box-shadow: 0 6px 20px rgba(233, 80, 118, 0.10);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(26, 36, 52, 0.12);
+  border-color: rgba(232, 159, 183, 0.4);
+}
+
+.expertise-card:hover .expertise-card__title {
+  color: var(--delogis-base);
+}
+
+.expertise-card:hover .expertise-card__icon-bubble {
+  background: var(--delogis-base);
+}
+
+.expertise-card:hover .expertise-card__icon-bubble span,
+.expertise-card:hover .expertise-card__icon-bubble i {
+  color: #fff;
+  transform: scale(1.1);
 }
 
 /* ── 9. Icon Bubble ── */
@@ -17990,12 +18009,14 @@ html body ul.services-details__services li a i.icon-arrow-subtle {
   justify-content: center;
   margin-bottom: 12px;
   flex-shrink: 0;
+  transition: all 400ms ease;
 }
 
 .expertise-card__icon-bubble i,
 .expertise-card__icon-bubble span {
   font-size: 18px;
   color: var(--delogis-base);
+  transition: all 400ms ease;
 }
 
 /* ── 10. Expertise Card Typography ── */
