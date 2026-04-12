@@ -2579,10 +2579,6 @@ p {
   transition: color 0.3s ease;
 }
 
-.pillar-item:hover h4 {
-  color: var(--delogis-base);
-}
-
 .pillar-item h4 i {
   color: #e89fb7;
   margin-right: 10px;
