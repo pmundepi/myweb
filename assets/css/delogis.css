@@ -1,3 +1,12 @@
+/**
+ * delogis.css
+
+ * Project : AceFidential Health
+ * Author  : Development Team
+ */
+
+
+
 /* ================================================
    CUSTOM PROPERTIES
 ================================================ */
@@ -2551,24 +2560,47 @@ p {
   padding: 15px;
   border-radius: 12px;
   border: 1px solid rgba(232, 159, 183, 0.15);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  cursor: default;
+}
+
+.pillar-item:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(232, 159, 183, 0.08) 0%, rgba(255, 255, 255, 1) 100%);
+  border-color: rgba(232, 98, 148, 0.35);
+  box-shadow: 0 12px 30px rgba(232, 98, 148, 0.12);
 }
 
 .pillar-item h4 {
   font-size: 16px;
   margin-bottom: 5px;
   color: var(--delogis-black);
+  transition: color 0.3s ease;
+}
+
+.pillar-item:hover h4 {
+  color: var(--delogis-base);
 }
 
 .pillar-item h4 i {
   color: #e89fb7;
   margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.pillar-item:hover h4 i {
+  color: var(--delogis-base);
 }
 
 .pillar-item p {
   font-size: 13px;
   margin: 0;
+  transition: color 0.3s ease;
+}
+
+.pillar-item:hover p {
+  color: #555;
 }
 
 .about-three__right {

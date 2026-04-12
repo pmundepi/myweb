@@ -1,4 +1,11 @@
-/** FILE: responsive.css **/
+/**
+ * responsive.css
+ * Media query overrides for layout, components, and typography.
+ * Breakpoints are ordered from largest to smallest for clarity.
+ *
+ * Project : AceFidential Health
+ * Author  : Development Team
+ */
 
 @media only screen and (min-width: 1500px) and (max-width: 1780px) {
 
@@ -62,13 +69,6 @@
 
 }
 
-
-
-
-
-
-
-
 @media (max-width: 1200px) {
 
   /* --- COMPONENTS --- */
@@ -131,7 +131,7 @@
     bottom: 5px;
   }
 
-  /* --- UX PRECISION FIXES (1200px / 15.6" Optmization) --- */
+  /* --- PRECISION ADJUSTMENTS (15.6" / 1200px Viewport Optimization) --- */
   .billing-integrations__grid {
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 24px !important;
@@ -337,6 +337,7 @@
 
 }
 
+/* No overrides required at this breakpoint (≤ 1024px). */
 @media (max-width: 1024px) {}
 
 @media (min-width: 1024px) {
@@ -3587,7 +3588,6 @@
   .footer-cta-section .site-footer__top-content p {
     font-size: 13px !important;
   }
-
 }
 
 @media(max-width:550px) {
@@ -3600,6 +3600,7 @@
 
 }
 
+/* No overrides required at this breakpoint (≤ 480px). */
 @media (max-width: 480px) {}
 
 @media (prefers-reduced-motion: reduce) {
@@ -3617,7 +3618,7 @@
 
 }
 
-/* FORCE CENTER GLOBAL (Safe for Mobile) */
+/* Global centering override for Services Three section — applies at all viewport widths. */
 .services-three__top .col-xl-12,
 .services-three__left,
 .services-three .section-title,
@@ -3635,7 +3636,7 @@
   white-space: normal !important;
 }
 
-/* DESKTOP ONLY: Force single line */
+/* Desktop override: prevent title wrapping on large viewports (≥ 992px). */
 @media (min-width: 992px) {
   .services-three .section-title__title {
     white-space: nowrap !important;
@@ -3645,10 +3646,6 @@
   }
 }
 
-/* ================================================
-   MOVED FROM delogis.css
-================================================ */
-
 @media (max-width: 767px) {
   .card-style-accrodion .accrodion-content {
     padding-left: 0;
@@ -3656,8 +3653,6 @@
 }
 
 @media (max-width: 991px) {
-
-
   .expertise-card-col--third {
     flex: 1 1 calc(50% - 14px);
   }
@@ -3672,17 +3667,7 @@
     min-width: unset;
   }
 
-
-
   .expertise-grid-wrapper {
     padding: 0 8px;
   }
 }
-
-
-
-/* ================================================
-   MEDIA QUERIES (moved from delogis.css)
-================================================ */
-
-
