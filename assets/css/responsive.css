@@ -1829,11 +1829,6 @@
 
 @media (max-width: 767px) {
 
-  /* --- LAYOUT & GRID --- */
-  .billing-integrations .section-title {
-    margin-bottom: 24px;
-  }
-
   .billing-integrations .section-title__title {
     padding-bottom: 14px;
     margin-bottom: 12px;
@@ -1878,7 +1873,6 @@
   }
 
   .about-three .section-title__title {
-    font-size: 32px !important;
     line-height: 1.2 !important;
   }
 
@@ -2501,8 +2495,12 @@
   }
 
   .section-title__title span:before {
-    display: none;
-  }
+    display: block !important;
+    right: -22px !important;
+    top: 0px !important;
+    width: 28px !important;
+    height: 24px !important;
+}
 
   /* --- COMPONENTS --- */
   .about-one__curved-circle-box {

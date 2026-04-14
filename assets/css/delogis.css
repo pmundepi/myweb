@@ -354,10 +354,10 @@ img {
 .section-title__title span:before {
   content: "";
   position: absolute;
-  top: 10px;
-  width: 30px;
-  right: -20px;
-  height: 26px;
+  top: 2px !important;
+  right: -28px !important;
+  width: 35px !important;
+  height: 30px !important;
   background-image: url(../images/shapes/section-title-shape.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -370,6 +370,9 @@ img {
   animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  content: "";
+  background-size: contain !important;
+  z-index: 10;
 }
 
 .about-three__left .section-title {
