@@ -888,9 +888,13 @@ p {
 }
 
 .main-menu .main-menu__list>li>ul>li:hover>a,
+.main-menu .main-menu__list>li>ul>li.current>a,
 .main-menu .main-menu__list>li>ul>li>ul>li:hover>a,
+.main-menu .main-menu__list>li>ul>li>ul>li.current>a,
 .stricky-header .main-menu__list>li>ul>li:hover>a,
-.stricky-header .main-menu__list>li>ul>li>ul>li:hover>a {
+.stricky-header .main-menu__list>li>ul>li.current>a,
+.stricky-header .main-menu__list>li>ul>li>ul>li:hover>a,
+.stricky-header .main-menu__list>li>ul>li>ul>li.current>a {
   background-color: var(--delogis-primary);
   color: var(--delogis-black);
 }

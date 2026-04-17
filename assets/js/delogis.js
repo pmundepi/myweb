@@ -430,24 +430,34 @@
   }
 
   function dynamicCurrentMenuClass(selector) {
-    var FileName = window.location.href.split("/").reverse()[0];
+    var path = window.location.pathname;
+    var FileName = path.split("/").pop();
+    if (FileName === "" || FileName === "index.html") {
+      FileName = "index.html"; 
+    }
 
     selector.find("li").each(function () {
       var anchor = $(this).find("a");
-      if ($(anchor).attr("href") === FileName) {
-        $(this).addClass("current");
+      if (anchor.length) {
+        var href = $(anchor).attr("href");
+        if (href) {
+          var linkFile = href.split("/").pop();
+          if (linkFile === "" || linkFile === "index.html") {
+            linkFile = "index.html";
+          }
+          if (linkFile === FileName) {
+            $(this).addClass("current");
+          }
+        }
       }
     });
-    // if any li has .current elmnt add class
-    selector.children("li").each(function () {
+
+    // Parent highlighting for dropdowns
+    selector.find(".dropdown").each(function () {
       if ($(this).find(".current").length) {
         $(this).addClass("current");
       }
     });
-    // if no file name return
-    if ("" === FileName) {
-      selector.find("li").eq(0).addClass("current");
-    }
   }
 
   if ($(".main-menu__list").length) {
